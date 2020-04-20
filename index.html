@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My final project</title>
+	<title>Prototype techniques</title>
 	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 	<script src="https://d3js.org/d3.v5.min.js"></script>
@@ -23,6 +23,7 @@
 		justify-content: center;
 		align-items:center;
 		border-bottom:0.05em solid black;
+		z-index:100;
 	}
 	.title {
 		height:50vh;
@@ -136,6 +137,7 @@
 	}
 	.tableauPlaceholder{
 		width:50%;
+		z-index:0;
 	}
 	img{
 		text-align:center;
@@ -208,20 +210,20 @@
 
 <!-- nav -->
 <nav>
-	<h3>My Project</h3>
+	<h3>Title</h3>
 </nav>
 
 <!-- text -->
 <div class='header title step'>
 	<div class='aligner'>
-		<h1>My Project</h1>
-		<h2>A project about a dataset on oranges</h2>	
+		<h1>Title</h1>
+		<h2>Sub line</h2>	
 	</div>
 </div>
 
 
 <div class='text'>
-	<h2>Emily Chu</h2>
+	<h2>Author</h2>	
 	Intro to your article. Mauris torquent velit faucibus tincidunt porta aliquam lacinia congue dapibus. Risus curabitur molestie egestas aptent hendrerit id hac at augue pharetra at sagittis. Gravida scelerisque ultrices non libero; rutrum ultrices? Sagittis semper per per semper non himenaeos. Metus parturient turpis etiam mauris sapien nisl lacus class sagittis maecenas mus! Risus vulputate, pretium cursus aenean consequat etiam fermentum sed blandit id.
 </div>
 
@@ -230,10 +232,11 @@
 	Sollicitudin, feugiat nibh diam. Mus placerat cras blandit cursus tempus curae; turpis, scelerisque curae; mauris cursus. Dictumst volutpat etiam nec nisl sapien risus? Auctor semper quisque, arcu penatibus tempus torquent. Nostra; phasellus penatibus primis nam ridiculus nunc? Dui suscipit habitant ante platea luctus ridiculus hac! Hendrerit mollis vitae ultricies habitant cum laoreet, in fames magnis. Himenaeos lacus cum ullamcorper aptent class quisque netus duis phasellus non etiam scelerisque.
 </div>
 
+
 <!-- image 1 -->
 <div class='center_aligner'>
 	<!-- change line 120 if you want to change the size of the image -->
-	<img class='small' src="images/1.jpg">
+	<img class='small' src="images/1.jpg"> 	
 </div>
 <!-- caption for image 1 -->
 <div class='center_aligner'>
@@ -241,8 +244,14 @@
 </div>
 
 
+<!-- tableau public -->
+<div class='center_aligner'>
+	<!-- insert tableau public embed link below this line -->
+	<div class='tableauPlaceholder' id='viz1587347678606' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;23&#47;23InformationVisualizationClassInsights&#47;Insights&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='23InformationVisualizationClassInsights&#47;Insights' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;23&#47;23InformationVisualizationClassInsights&#47;Insights&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587347678606');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1024px';vizElement.style.height='795px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
 <div class='text'>
-	<h1>Indicators change over the course of the year</h1>
+	<h1>How does month influence measured indicators?</h1>
 	Sollicitudin, feugiat nibh diam. Mus placerat cras blandit cursus tempus curae; turpis, scelerisque curae; mauris cursus. Dictumst volutpat etiam nec nisl sapien risus? Auctor semper quisque, arcu penatibus tempus torquent. Nostra; phasellus penatibus primis nam ridiculus nunc? Explore in the interactive below.
 </div>
 
@@ -253,11 +262,10 @@
 
 
 <div class='text'>
-	<h1>What other factors influence class indicators?</h1>
+	<h1>What main factors influence measured indicators?</h1>
 	Sollicitudin, feugiat nibh diam. Mus placerat cras blandit cursus tempus curae; turpis, scelerisque curae; mauris cursus. Dictumst volutpat etiam nec nisl sapien risus? Auctor semper quisque, arcu penatibus tempus torquent. Nostra; phasellus penatibus primis nam ridiculus nunc? Dui suscipit habitant ante platea luctus ridiculus hac! Hendrerit mollis vitae ultricies habitant cum laoreet, in fames magnis. Himenaeos lacus cum ullamcorper aptent class quisque netus duis phasellus non etiam scelerisque.
 </div>
 
-<!-- CMD + ?/ -- you can type notes here -->
 
 <!-- counter -->
 <div class='header sticky step' id='dynamic_sticky1'>
@@ -334,7 +342,7 @@ scroller2
     	stick('dynamic_sticky1')
     	response.direction=='down'
     	if(response.index==0){
-    		count(1,16,1,'Energy',"astronaut's time",'dynamic_sticky1','','!')
+    		count(1,16,1,'Energy','after a 15 minute break','dynamic_sticky1')
     	} else if (response.index==1){
     		count(1,3.8,.1,'Engagement','average','dynamic_sticky1')
     	} else if (response.index==2){
